@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    ray('My first ray call');
     return view('welcome');
 });
 
