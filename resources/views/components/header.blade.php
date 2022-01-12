@@ -5,7 +5,7 @@
             <div class="flex items-center">
                 <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 mr-10 flex items-center">
                     <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg1.svg" alt="logo" />
-                    <h3 class="text-base text-gray-800 font-bold tracking-normal leading-tight mx-3 hidden lg:block">The North</h3>
+                    <h3 class="text-base text-gray-800 font-bold tracking-normal leading-tight mx-3 hidden lg:block">Banko.Space</h3>
                 </button>
                 <div class="hidden xl:flex items-center h-full">
                     <a href="javascript:void(0)" class="focus:outline-none border-b-2 border-transparent focus:border-indigo-700 cursor-pointer h-full flex items-center text-sm text-gray-700 hover:text-indigo-700 focus:text-indigo-700 tracking-normal transition duration-150 ease-in-out">
@@ -113,8 +113,8 @@
                             </a>
                             </li>
                         </ul>
-                        <img class="rounded h-10 w-10 object-cover" src="https://tuk-cdn.s3.amazonaws.com/assets/components/horizontal_navigation/hn_1.png" alt="logo" />
-                        <p class=" text-sm ml-2">Jane Doe</p>
+                        <img class="rounded h-10 w-10 object-cover" src="{{asset('imgs/me.jpg')}}" alt="logo" />
+                        <p class=" text-sm ml-2">Valeri Sabev</p>
                     </button>
                 </div>
             </div>
