@@ -1,10 +1,7 @@
 <div class="bg-linear-pink-invert py-12 px-4">
     <div tabindex="0" aria-label="footer" class="focus:outline-none mx-auto container flex flex-col items-center justify-center">
-        <div tabindex="0" aria-label="prodify logo" role="img">
-           <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_center_aligned_with_logo-svg1.svg" alt="logo">
-        </div>
         <div class="text-black flex flex-col md:items-center f-f-l pt-3">
-            <h1 tabindex="0" class="focus:outline-none text-2xl font-black">Spend. Save. Loan.</h1>
+            <h1 tabindex="0" class="focus:outline-none text-2xl font-black">Send and Receive Money in SECONDS</h1>
             <div class="md:flex items-center mt-5 md:mt-10 text-base text-color f-f-l">
                 <h2  class=" md:mr-6 pb-4 md:py-0 cursor-pointer"><a  class="focus:outline-none focus:underline hover:text-gray-700" href="javascript:void(0)">Download Now</a> </h2>
                 <h2  class="cursor-pointer"><a class="focus:outline-none focus:underline hover:text-gray-700" href="javascript:void(0)">License</a> </h2>
