@@ -2,8 +2,6 @@
 // Tinkerwell only prints one thing
 // Always prints the last variable
 
-use App\Models;
-
 // Get user with id less or equal to 5
 // User::query()->where('id', '<=', 5)->get()->pluck('name');
 
@@ -26,8 +24,8 @@ use App\Models;
 
 
 // Factories
-// User::factory(10)->create();
-// Account::factory(10)->create();
-// Account::all()->pluck('user')->pluck('email');
+User::factory(10)->create();
+Account::factory(10)->create();
+Account::all()->pluck('user')->pluck('email');
 
-Transactions::factory(5)->create();
+Transaction::factory(5)->create();
