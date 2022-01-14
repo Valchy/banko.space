@@ -13,9 +13,9 @@ class CreateTransactionsTable extends Migration
             $table->integer('account_from');
             $table->integer('account_to');
             $table->string('status', 255)->default('pending');
-            $table->dateTime('sent_date')->default(now());
-            $table->dateTime('received_date')->nullable();
             $table->integer('action_by')->nullable();
+
+            $table->timestamps();
             $table->softDeletes();
         });
     }
