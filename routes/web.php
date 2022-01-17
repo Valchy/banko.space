@@ -17,6 +17,11 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', HomeController::class);
 
+Route::get('/test', function() {
+    // abort(500);
+    throw new Exception('Custom exception message :))');
+});
+
 Route::get('/welcome', function () {
     ray('My first ray call');
     return view('welcome');
