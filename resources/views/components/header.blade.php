@@ -95,8 +95,10 @@
                             </a>
                             </li>
                         </ul>
-                        <img class="rounded h-10 w-10 object-cover" src="{{asset('imgs/me.jpg')}}" alt="logo"/>
-                        <p class=" text-sm ml-2">Valeri Sabev</p>
+                        @auth
+                            <img class="rounded h-10 w-10 object-cover" src="{{asset('imgs/me.jpg')}}" alt="logo"/>
+                        @endauth
+                        <p class=" text-sm ml-2">{{auth()->user()->name ?? 'Guest'}}</p>
                     </button>
                 </div>
             </div>
