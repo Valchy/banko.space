@@ -21,6 +21,16 @@ class InitialSeed extends Command
     {
         User::factory(10)->create();
         Account::factory(10)->create();
+        Account::all()->pluck('user')->pluck('email');
+
+        User::factory(1)->create();
+        $admin = User::latest()->first();
+        $admin->update([
+            'is_admin' => true,
+            'name' => 'Valeri Sabev',
+            'email' => 'valerisabev.com@gmail.com'
+        ]);
+
         Transaction::factory(5)->create();
         return 0;
     }
