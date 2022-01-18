@@ -23,9 +23,8 @@ Route::get('/test', function() {
 });
 
 Route::get('/welcome', function () {
-    ray('My first ray call');
     return view('welcome');
-});
+})->middleware(['auth', 'is_admin']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
