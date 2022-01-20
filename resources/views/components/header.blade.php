@@ -1,6 +1,6 @@
 <div class="h-full w-full">
     <!-- Code block starts --> 
-    <nav class="w-full bg-white hidden xl:block shadow">
+    <nav class="w-full bg-white hidden xl:block shadow z-10 relative">
         <div class="container px-6 h-16 flex justify-between items-center lg:items-stretch mx-auto">
             <div class="flex items-center">
                 <button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 mr-10 flex items-center">
