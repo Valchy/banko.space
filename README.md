@@ -12,6 +12,11 @@ php bs:seed
 npm install && npm run dev
 ```
 
+Make sure to copy the .example.env file into a .env file then
+```
+php artisan key:generate
+```
+
 ## Usage
 
 ```php
