@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TransactionHistoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,8 @@ Route::get('/test', function() {
 Route::get('/welcome', function () {
     return view('welcome');
 })->middleware(['auth', 'is_admin']);
+
+Route::get('transaction-history', TransactionHistoryController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
