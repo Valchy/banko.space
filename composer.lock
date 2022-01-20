@@ -3308,16 +3308,16 @@
         },
         {
             "name": "spatie/ignition",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/ignition.git",
-                "reference": "5c97356fd80fab73445eddd216adc68d34f61b65"
+                "reference": "d2d5ba823af3004268556e87dfc94449e4159f5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/ignition/zipball/5c97356fd80fab73445eddd216adc68d34f61b65",
-                "reference": "5c97356fd80fab73445eddd216adc68d34f61b65",
+                "url": "https://api.github.com/repos/spatie/ignition/zipball/d2d5ba823af3004268556e87dfc94449e4159f5a",
+                "reference": "d2d5ba823af3004268556e87dfc94449e4159f5a",
                 "shasum": ""
             },
             "require": {
@@ -3375,7 +3375,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-18T15:12:57+00:00"
+            "time": "2022-01-19T12:57:41+00:00"
         },
         {
             "name": "spatie/image",
