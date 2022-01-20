@@ -184,7 +184,7 @@
     </nav>
     <!-- Navbar -->
     <nav>
-        <div class="py-4 px-6 w-full flex xl:hidden justify-between items-center bg-white fixed top-0 z-40">
+        <div class="py-4 px-6 w-full flex xl:hidden justify-between items-center bg-white">
             <div tabindex="0" class="focus:outline-none w-24">
                 <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg2.svg" alt="logo"/>
             </div>

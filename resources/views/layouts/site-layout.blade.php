@@ -20,7 +20,7 @@
 	</header>
 
 	{{-- Page Content --}}
-	<section>
+	<section class="section-body">
 		{{$slot}}
 	</section>
 
