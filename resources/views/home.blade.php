@@ -1,3 +1,10 @@
 <x-site-layout title="Banko.Space">
-	<img src="{{asset('/imgs/bankospace_landing_page.jpg')}}"/>
+	<center>
+		<br/>
+		<br/>
+		<span>Welcome to the bank of the future.</span>
+		<br/>
+		<br/>
+		<br/>
+	</center>
 </x-site-layout>

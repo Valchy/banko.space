@@ -5,10 +5,10 @@ Banko.Space is a small project to demonstrate how a digital bank would work. You
 ## Installation
 
 Use [composer](https://getcomposer.org/) to download all the packages.
-
-```bash
-composer install
-php artisan make migrations
+```
+composer update
+php artisan migrate
+php bs:seed
 npm install && npm run dev
 ```
 
