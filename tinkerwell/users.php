@@ -1,4 +1,5 @@
 <?php
+
 // Tinkerwell only prints one thing
 // Always prints the last variable
 
@@ -10,9 +11,6 @@
 
 // User::query()->where('id', 1)->orWhere('id', 4)->get();
 
-
-
-
 // $articles = collect([
 //   ['name' => 'Valeri', 'age' => 20],
 //   ['name' => 'Viki', 'age' => 19]
@@ -21,7 +19,6 @@
 // $articles->map(function($item) {
 //   return $item['name'] . ' is ' . $item['age'] . ' years old.';
 // });
-
 
 // Factories
 User::factory(10)->create();

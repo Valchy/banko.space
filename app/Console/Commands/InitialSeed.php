@@ -2,9 +2,9 @@
 
 namespace App\Console\Commands;
 
-use App\Models\User;
-use App\Models\Transaction;
 use App\Models\Account;
+use App\Models\Transaction;
+use App\Models\User;
 use Illuminate\Console\Command;
 
 class InitialSeed extends Command
@@ -27,11 +27,12 @@ class InitialSeed extends Command
         $admin = User::latest()->first();
         $admin->update([
             'is_admin' => true,
-            'name' => 'Valeri Sabev',
-            'email' => 'valerisabev.com@gmail.com'
+            'name'     => 'Valeri Sabev',
+            'email'    => 'valerisabev.com@gmail.com',
         ]);
 
         Transaction::factory(5)->create();
+
         return 0;
     }
 }

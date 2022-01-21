@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Transaction extends Model
@@ -12,11 +11,13 @@ class Transaction extends Model
     use HasFactory;
     use SoftDeletes;
 
-    public function accountFrom() {
+    public function accountFrom()
+    {
         return $this->belongsTo(Account::class, 'account_from');
     }
 
-    public function accountTo() {
+    public function accountTo()
+    {
         return $this->belongsTo(Account::class, 'account_to');
     }
 }
