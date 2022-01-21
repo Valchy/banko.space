@@ -3,10 +3,10 @@
 	<nav class="w-full bg-white hidden xl:block shadow z-10 relative">
 		<div class="container px-6 h-16 flex justify-between items-center lg:items-stretch mx-auto">
 			<div class="flex items-center">
-				<button class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 mr-10 flex items-center">
+				<a href="/" class="focus:outline-none focus:ring-2 focus:ring-offset-2 mr-10 flex items-center">
 					<img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg1.svg" alt="logo"/>
 					<h3 class="text-base text-gray-800 font-bold tracking-normal leading-tight mx-3 hidden lg:block">Banko.Space</h3>
-				</button>
+				</a>
 				<div class="hidden xl:flex items-center h-full">
 					<a href="/dashboard" class="focus:outline-none border-b-2 border-transparent focus:border-indigo-700 cursor-pointer h-full flex items-center text-sm text-gray-700 hover:text-indigo-700 focus:text-indigo-700 tracking-normal transition duration-150 ease-in-out">
 						<span class="mr-2">
@@ -52,39 +52,46 @@
 							<path d="M9 17v1a3 3 0 0 0 6 0v-1"/>
 						</svg>
 					</button>
-					<button aria-label="dropdown" class="focus:outline-none text-gray-800 border-b-2 focus:text-indigo-700 border-transparent focus:border-indigo-700 flex items-center pl-8 relative cursor-pointer" onclick="dropdownHandler(this)">
-						<ul class="p-2 w-40 border-r bg-white absolute rounded left-0 shadow mt-16 top-0 hidden">
+					<button aria-label="dropdown" class="focus:outline-none text-gray-800 border-b-2 flex items-center pl-8 relative cursor-pointer" onclick="dropdownHandler(this)">
+						<ul class="py-4 px-6 w-50 border-r bg-white absolute rounded left-0 shadow mt-16 top-0 hidden">
+							@if (auth()->check())
+								<li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+									<a href="/profile" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
+										<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+											<path stroke="none" d="M0 0h24v24H0z"/>
+											<circle cx="12" cy="7" r="4"/>
+											<path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"/>
+										</svg>
+										<span class="ml-2">My Profile</span>
+									</a>
+								</li>
+								<li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+									<a href="/settings" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
+										<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+											<path stroke="none" d="M0 0h24v24H0z"/>
+											<path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+											<circle cx="12" cy="12" r="3"/>
+										</svg>
+										<span class="ml-2">Settings</span>
+									</a>
+								</li>
+								<li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+									<a href="{{url('/logout')}}" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
+										<span class="ml-2">Logout</span>
+									</a>
+								</li>
+							@else
 							<li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
-								<a href="javascript:void(0)" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
-									<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-										<path stroke="none" d="M0 0h24v24H0z"/>
-										<circle cx="12" cy="7" r="4"/>
-										<path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"/>
-									</svg>
-									<span class="ml-2">My Profile</span>
+								<a href="/login" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
+									<span class="ml-2">Login</span>
 								</a>
 							</li>
-							<li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex items-center">
-								<a href="javascript:void(0)" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
-								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-help" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-									<path stroke="none" d="M0 0h24v24H0z"/>
-									<circle cx="12" cy="12" r="9"/>
-									<line x1="12" y1="17" x2="12" y2="17.01"/>
-									<path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4"/>
-								</svg>
-								<span class="ml-2">Help Center</span>
-							</a>
-							</li>
 							<li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
-								<a href="javascript:void(0)" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
-								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-									<path stroke="none" d="M0 0h24v24H0z"/>
-									<path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-									<circle cx="12" cy="12" r="3"/>
-								</svg>
-								<span class="ml-2">Account Settings</span>
-							</a>
+								<a href="/register" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
+									<span class="ml-2">Register</span>
+								</a>
 							</li>
+							@endif
 						</ul>
 						@auth
 							<img class="rounded h-10 w-10 object-cover" src="{{asset('imgs/me.jpg')}}" alt="logo"/>
