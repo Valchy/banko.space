@@ -1,9 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TransactionHistoryController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +17,7 @@ use App\Http\Controllers\TransactionHistoryController;
 
 Route::get('/', HomeController::class);
 
-Route::get('/test', function() {
+Route::get('/test', function () {
     // abort(500);
     throw new Exception('Custom exception message :))');
 });

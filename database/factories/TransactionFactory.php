@@ -16,8 +16,8 @@ class TransactionFactory extends Factory
 
         return [
             'account_from' => rand(1, 10),
-            'account_to' => rand(1, 10),
-            'amount' => rand(10, 35)
+            'account_to'   => rand(1, 10),
+            'amount'       => rand(10, 35),
         ];
     }
 }

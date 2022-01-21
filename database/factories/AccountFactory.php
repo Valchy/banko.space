@@ -11,9 +11,9 @@ class AccountFactory extends Factory
         static $order = 1;
 
         return [
-            'username' => $this->faker->userName(),
+            'username'        => $this->faker->userName(),
             'account_balance' => rand(100, 500),
-            'user_id' => $order++
+            'user_id'         => $order++,
         ];
     }
 }
