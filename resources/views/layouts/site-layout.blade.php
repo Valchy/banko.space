@@ -22,6 +22,7 @@
 
 	{{-- Page Content --}}
 	<section class="section-body">
+		{{__('test')}}
 		{{$slot}}
 	</section>
 
