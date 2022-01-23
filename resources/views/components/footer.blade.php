@@ -14,12 +14,8 @@
         </div>
         <div class="w-9/12 h-0.5 bg-gray-100 rounded-full"></div>
         <div class="flex justify-between items-center pt-12">
-            <x-footer.download-btn>
-                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_center_aligned_with_logo-svg2.svg" alt="download on the app store">
-            </x-footer.download-btn>
-            <x-footer.download-btn>
-                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_center_aligned_with_logo-svg3.svg" alt="get it on google play">
-            </x-footer.download-btn>
+            <x-footer.download-btn src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_center_aligned_with_logo-svg2.svg" alt="download on the app store"/>
+            <x-footer.download-btn src="https://tuk-cdn.s3.amazonaws.com/can-uploader/simple_center_aligned_with_logo-svg3.svg" alt="get it on google play"/>
         </div>
     </div>
 </div>
