@@ -11,6 +11,6 @@ class TransactionHistoryController extends Controller
     {
         $transactions = Transaction::all();
 
-        return view('transaction_history', compact('transactions'));
+        return view('transaction-history', compact('transactions'));
     }
 }
