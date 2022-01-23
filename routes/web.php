@@ -24,7 +24,7 @@ Route::get('/test', function () {
     throw new Exception('Custom exception message :))');
 });
 
-Route::middleware(['auth'])->group(function() {
+Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'index']);
     Route::get('/settings', [SettingsController::class, 'index']);
 });
