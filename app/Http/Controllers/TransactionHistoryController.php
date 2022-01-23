@@ -9,7 +9,7 @@ class TransactionHistoryController extends Controller
 {
     public function __invoke(Request $request)
     {
-        $transactions = Transaction::all();
+        $transactions = Transaction::paginate(10);
 
         return view('transaction-history', compact('transactions'));
     }

@@ -1291,6 +1291,17 @@ select {
 * {
     font-family: 'Montserrat' !important;
 }
+.pagination-wrapper div:first-child {
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+.pagination-wrapper div:last-child {
+    flex-direction: column;
+}
+.pagination-wrapper div:last-child div:first-child {
+    margin-top: 25px;
+}
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
