@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingsController;
@@ -29,10 +30,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/settings', [SettingsController::class, 'index']);
 });
 
-Route::get('/welcome', function () {
-    return view('welcome');
-})->middleware(['auth', 'is_admin']);
-
+Route::get('/admin', [AdminController::class, 'index'])->middleware(['auth', 'is_admin']);
 Route::get('transaction-history', TransactionHistoryController::class);
 
 Route::get('/dashboard', function () {
