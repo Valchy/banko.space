@@ -31,7 +31,7 @@ class InitialSeed extends Command
             'email'    => 'valerisabev.com@gmail.com',
         ]);
 
-        Transaction::factory(5)->create();
+        Transaction::factory(50)->create();
 
         return 0;
     }
