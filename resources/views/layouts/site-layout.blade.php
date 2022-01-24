@@ -10,9 +10,7 @@
 	{{-- CSS Files --}}
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
-
-	{{-- JS Files --}}
-    <script src="{{asset('js/header.js')}}"></script>
+	@livewireStyles
 </head>
 <body>
 	{{-- Page Header --}}
@@ -30,5 +28,9 @@
 	<footer>
 		@include('components.footer')
 	</footer>
+
+	{{-- JS Files --}}
+    <script src="{{asset('js/header.js')}}"></script>
+	@livewireScripts
 </body>
 </html>
