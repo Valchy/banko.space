@@ -30,7 +30,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/settings', [SettingsController::class, 'index']);
 });
 
-Route::get('/admin', [AdminController::class, 'index'])->middleware(['auth', 'is_admin']);
+Route::resource('/admin', AdminController::class)->middleware(['auth', 'is_admin']);
 Route::get('transaction-history', TransactionHistoryController::class);
 
 Route::get('/dashboard', function () {
