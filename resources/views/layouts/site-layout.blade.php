@@ -9,7 +9,7 @@
 
 	{{-- CSS Files --}}
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="{{asset('css/app.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('css/app.css?'.rand(1,1000))}}">
 	@livewireStyles
 </head>
 <body>
