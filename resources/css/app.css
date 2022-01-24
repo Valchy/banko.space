@@ -5,17 +5,3 @@
 * {
     font-family: 'Montserrat' !important;
 }
-
-.pagination-wrapper div:first-child {
-    align-items: center;
-    justify-content: center;
-    margin-top: 25px;
-}
-
-.pagination-wrapper div:last-child {
-    flex-direction: column;
-}
-
-.pagination-wrapper div:last-child div:first-child {
-    margin-top: 25px;
-}

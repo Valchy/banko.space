@@ -24,8 +24,6 @@
 				</tr>
 			@endforeach
 		</table>
-		<div class="pagination-wrapper">
-			{{$transactions->links()}}
-		</div>
+		{{$transactions->links()}}
 	</center>
 </x-site-layout>
