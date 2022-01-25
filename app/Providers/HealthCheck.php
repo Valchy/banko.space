@@ -8,7 +8,7 @@ use Spatie\Health\Checks\Checks\DatabaseCheck;
 use Spatie\Health\Checks\Checks\UsedDiskSpaceCheck;
 use Spatie\Health\Facades\Health;
 
-class CacheHealthCheck extends ServiceProvider
+class HealthCheck extends ServiceProvider
 {
     public function register()
     {
