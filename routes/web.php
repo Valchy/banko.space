@@ -1,5 +1,6 @@
 <?php
 
+use Spatie\Health\Http\Controllers\HealthCheckResultsController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
@@ -36,5 +37,7 @@ Route::get('transaction-history', TransactionHistoryController::class);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+
+Route::get('health', HealthCheckResultsController::class);
 
 require __DIR__.'/auth.php';
