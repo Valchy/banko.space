@@ -8,6 +8,7 @@
 		<br/>
 
 		<h1 class="pb-3 text-2xl font-black">Transactions</h1>
+		<input placeholder="Search for a transaction"/>
 		<table>
 			<thead>
 				<tr>
