@@ -176,7 +176,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         // Health Check Provider
-        App\Providers\HealthCheck::class,
+        App\Providers\HealthCheckServiceProvider::class,
     ],
 
     /*
