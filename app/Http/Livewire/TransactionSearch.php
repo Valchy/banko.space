@@ -2,8 +2,8 @@
 
 namespace App\Http\Livewire;
 
-use Livewire\Component;
 use App\Models\Transaction;
+use Livewire\Component;
 
 class TransactionSearch extends Component
 {
