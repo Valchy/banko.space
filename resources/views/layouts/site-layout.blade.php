@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{str_replace('_', '-', app()->getLocale())}}">
 <head>
 	{{-- Meta Data --}}
 	<meta charset="UTF-8">
@@ -15,12 +15,11 @@
 <body>
 	{{-- Page Header --}}
 	<header>
-		@include('components.header')
+		@include('components.header.header-layout')
 	</header>
 
 	{{-- Page Content --}}
 	<section class="section-body">
-		{{__('test')}}
 		{{$slot}}
 	</section>
 

@@ -16,10 +16,6 @@ function MenuHandler(el, val) {
         el.classList.add("hidden");
     }
 }
-function searchHandler(element) {
-    let Input = element.parentElement.getElementsByTagName("input")[0];
-    Input.classList.toggle("w-0");
-}
 // ------------------------------------------------------
 let sideBar = document.getElementById("mobile-nav");
 let menu = document.getElementById("menu");
