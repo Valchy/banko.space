@@ -120,8 +120,10 @@
                         <div class="border-t border-gray-300">
                             <div class="w-full flex items-center justify-between pt-1">
                                 <div class="flex items-center">
-                                    <img alt="profile-pic" src="{{asset('imgs/me.jpg')}}" tabindex="0" class="focus:outline-none w-8 h-8 rounded-md"/>
-                                    <p class="text-gray-800 text-base leading-4 ml-2">Valeri Sabev</p>
+                                    @auth
+                                        <img class="focus:outline-none w-8 h-8 rounded-md" src="{{asset('imgs/me.jpg')}}" alt="profile-pic"/>
+                                    @endauth
+                                    <p class="text-gray-800 text-base leading-4 ml-2">{{auth()->user()->name ?? __('Guest')}}</p>
                                 </div>
                                 <ul class="flex">
                                     <li class="cursor-pointer text-gray-800 pt-5 pb-3 pl-3">

@@ -1,6 +1,6 @@
 <x-site-layout title="Banko.Space">
 	<center class="my-10">
-		<h2>{{__('Welcome back')}}, {{auth()->user()->account->username}}</h2>
+		<h1 class="mb-10 text-2xl font-black">{{__('Welcome back')}}, {{auth()->user()->account->username}}</h1>
 
 		<div>
 			<span>{{__('Account Balance')}}: </span>

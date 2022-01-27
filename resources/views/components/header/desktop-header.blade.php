@@ -97,9 +97,9 @@
                         @endif
                     </ul>
                     @auth
-                        <img class="rounded h-10 w-10 object-cover" src="{{asset('imgs/me.jpg')}}" alt="logo"/>
+                        <img class="rounded h-10 w-10 object-cover" src="{{asset('imgs/me.jpg')}}" alt="profile-pic"/>
                     @endauth
-                    <p class=" text-sm ml-2">{{auth()->user()->name ?? __('Guest')}}</p>
+                    <p class="text-sm ml-2">{{auth()->user()->name ?? __('Guest')}}</p>
                 </button>
             </div>
         </div>
