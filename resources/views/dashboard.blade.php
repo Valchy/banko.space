@@ -12,6 +12,6 @@
 		<x-transaction-table :transactions="$transactions"/>
 
 		<h3>Your Top Ups</h3>
-		<x-top-up-table :topups="$topUps"/>
+		<x-top-up-table :topUps="$topUps"/>
 	</div>
 </x-site-layout>
