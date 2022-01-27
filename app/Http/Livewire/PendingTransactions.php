@@ -12,12 +12,15 @@ class PendingTransactions extends Component
         $transaction = Transaction::query()->where('id', $transaction_id);
 
         if ($approved) $transaction->update(['status' => 'approved']);
-        else $transaction->delete();
+        else {
+            $transaction->update(['status' => 'refused']);
+            $transaction->delete();
+        }
     }
 
     public function render()
     {
-        $transactions = Transaction::query()->where('status', 'pending')->get();
+        $transactions = Transaction::query()->where('status', 'pending')->paginate(5);
 
         return view('livewire.pending-transactions', compact('transactions'));
     }

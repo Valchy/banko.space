@@ -1,1 +1,3 @@
-Some server error
+<center>
+    Custom 500 Server Error
+</center>

@@ -30,5 +30,12 @@
 	"Options": "Опции",
 	"Approve": "Одобри",
 	"Refuse": "Откажи",
-	"Transactions with pending status": "Транзакции със статус очакване"
+	"Transactions with pending status": "Транзакции със статус очакване",
+	"pending": "очакване",
+	"approved": "одобрена",
+	"refused": "отказана",
+	"Showing": "Показване от",
+	"to": "до",
+	"of": "от",
+	"results": "резултата"
 }
