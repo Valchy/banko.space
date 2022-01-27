@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0fb8cc0f23b0d87d404ead31d7213207",
+    "content-hash": "5c95003976125cd978ed6ad052d5b4ea",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2412,16 +2412,16 @@
         },
         {
             "name": "nunomaduro/termwind",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/termwind.git",
-                "reference": "2a047696be3343fda0e4df8f47e1531a0a0bfae5"
+                "reference": "0f074a91ee26083234082205f1be8f7abc02b169"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/termwind/zipball/2a047696be3343fda0e4df8f47e1531a0a0bfae5",
-                "reference": "2a047696be3343fda0e4df8f47e1531a0a0bfae5",
+                "url": "https://api.github.com/repos/nunomaduro/termwind/zipball/0f074a91ee26083234082205f1be8f7abc02b169",
+                "reference": "0f074a91ee26083234082205f1be8f7abc02b169",
                 "shasum": ""
             },
             "require": {
@@ -2469,7 +2469,7 @@
             ],
             "support": {
                 "issues": "https://github.com/nunomaduro/termwind/issues",
-                "source": "https://github.com/nunomaduro/termwind/tree/v1.3.0"
+                "source": "https://github.com/nunomaduro/termwind/tree/v1.4.0"
             },
             "funding": [
                 {
@@ -2485,20 +2485,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-12T17:14:49+00:00"
+            "time": "2022-01-26T11:40:00+00:00"
         },
         {
             "name": "opis/closure",
-            "version": "3.6.2",
+            "version": "3.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opis/closure.git",
-                "reference": "06e2ebd25f2869e54a306dda991f7db58066f7f6"
+                "reference": "3d81e4309d2a927abbe66df935f4bb60082805ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opis/closure/zipball/06e2ebd25f2869e54a306dda991f7db58066f7f6",
-                "reference": "06e2ebd25f2869e54a306dda991f7db58066f7f6",
+                "url": "https://api.github.com/repos/opis/closure/zipball/3d81e4309d2a927abbe66df935f4bb60082805ad",
+                "reference": "3d81e4309d2a927abbe66df935f4bb60082805ad",
                 "shasum": ""
             },
             "require": {
@@ -2548,9 +2548,9 @@
             ],
             "support": {
                 "issues": "https://github.com/opis/closure/issues",
-                "source": "https://github.com/opis/closure/tree/3.6.2"
+                "source": "https://github.com/opis/closure/tree/3.6.3"
             },
-            "time": "2021-04-09T13:42:10+00:00"
+            "time": "2022-01-27T09:35:39+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -3729,16 +3729,16 @@
         },
         {
             "name": "spatie/laravel-health",
-            "version": "1.7.11",
+            "version": "1.7.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-health.git",
-                "reference": "544c4e9085afb682e7cbdbf64d80ab44a415a4d6"
+                "reference": "8ce372589c7d6fa60f36c2ca72cd0b4914a3043d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-health/zipball/544c4e9085afb682e7cbdbf64d80ab44a415a4d6",
-                "reference": "544c4e9085afb682e7cbdbf64d80ab44a415a4d6",
+                "url": "https://api.github.com/repos/spatie/laravel-health/zipball/8ce372589c7d6fa60f36c2ca72cd0b4914a3043d",
+                "reference": "8ce372589c7d6fa60f36c2ca72cd0b4914a3043d",
                 "shasum": ""
             },
             "require": {
@@ -3810,7 +3810,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/laravel-health/issues",
-                "source": "https://github.com/spatie/laravel-health/tree/1.7.11"
+                "source": "https://github.com/spatie/laravel-health/tree/1.7.14"
             },
             "funding": [
                 {
@@ -3818,7 +3818,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-01-24T10:23:04+00:00"
+            "time": "2022-01-26T14:21:29+00:00"
         },
         {
             "name": "spatie/laravel-honeypot",

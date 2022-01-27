@@ -2,6 +2,8 @@
 	"test": "фук",
 	"Dashboard": "Дашборд",
 	"Transaction History": "Направени Транзакции",
+	"No Transactions Yet": "Няма още транзакции",
+	"Transactions": "Транзакции",
 	"Admin": "Админ",
 	"My Profile": "Моят Профил",
 	"Settings": "Настройки",
@@ -14,5 +16,11 @@
 	"Remember me": "Запомни ме",
 	"Email": "Имейл",
 	"Password": "Парола",
-	"All rights reserved": "Всички права са запазени"
+	"All rights reserved": "Всички права са запазени",
+	"From": "От",
+	"To": "За",
+	"Status": "Статус",
+	"Amount": "Сума",
+	"Sent Date": "Дата на изпращане",
+	"Approved Data": "Дата на одобряване"
 }

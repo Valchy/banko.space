@@ -20,10 +20,6 @@ use Spatie\Health\Http\Controllers\HealthCheckResultsController;
 |
 */
 
-// Route::prefix(app()->getLocale())->group(function() {
-//     // add all routes here
-// });
-
 Route::get('/', HomeController::class);
 Route::get('/test', function () {
     // abort(500);
