@@ -11,6 +11,11 @@ class Transaction extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $fillable = [
+        'status',
+        'action_by'
+    ];
+
     public function accountFrom()
     {
         return $this->belongsTo(Account::class, 'account_from');

@@ -11,6 +11,11 @@ class Account extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $fillable = [
+        'username',
+        'account_balance'
+    ];
+
     public function transactions()
     {
         return $this->hasMany(Transaction::class);
