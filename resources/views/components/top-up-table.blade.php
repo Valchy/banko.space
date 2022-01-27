@@ -13,6 +13,7 @@
             </tr>
         @endforeach
     </table>
+    {{$topUps->links()}}
 @else
     <span> {{__('No Top-ups Yet')}} </span>
 @endif

@@ -82,18 +82,18 @@
                                 </a>
                             </li>
                         @else
-                        <li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
-                            <a href="/login" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
-                                <img width="16" src="{{asset('imgs/login.png')}}"/>
-                                <span class="ml-2">{{__('Login')}}</span>
-                            </a>
-                        </li>
-                        <li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
-                            <a href="/register" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
-                                <img width="16" src="{{asset('imgs/register.png')}}"/>
-                                <span class="ml-2">{{__('Register')}}</span>
-                            </a>
-                        </li>
+                            <li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+                                <a href="/login" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
+                                    <img width="16" src="{{asset('imgs/login.png')}}"/>
+                                    <span class="ml-2">{{__('Login')}}</span>
+                                </a>
+                            </li>
+                            <li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                                <a href="/register" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
+                                    <img width="16" src="{{asset('imgs/register.png')}}"/>
+                                    <span class="ml-2">{{__('Register')}}</span>
+                                </a>
+                            </li>
                         @endif
                     </ul>
                     @auth
@@ -102,84 +102,6 @@
                     <p class=" text-sm ml-2">{{auth()->user()->name ?? __('Guest')}}</p>
                 </button>
             </div>
-        </div>
-        <div class="flex items-center xl:hidden">
-            <ul class="p-2 border-r bg-white absolute rounded top-0 left-0 right-0 shadow mt-16 md:mt-16 hidden">
-                <li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
-                    <div class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-grid" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z"></path>
-                            <rect x="4" y="4" width="6" height="6" rx="1"></rect>
-                            <rect x="14" y="4" width="6" height="6" rx="1"></rect>
-                            <rect x="4" y="14" width="6" height="6" rx="1"></rect>
-                            <rect x="14" y="14" width="6" height="6" rx="1"></rect>
-                        </svg>
-                        <span class="ml-2 font-bold">{{__('Dashboard')}}</span>
-                    </div>
-                </li>
-                <li class="flex md:hidden flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center" onclick="dropdownHandler(this)">
-                    <div class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-puzzle" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z"></path>
-                            <path d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1"></path>
-                        </svg>
-                        <span class="ml-2 font-bold">Products</span>
-                    </div>
-                    <ul class="ml-6 mt-1 hidden">
-                        <li class="cursor-pointer text-gray-600 text-xs leading-3 tracking-normal py-2 hover:bg-indigo-700 hover:text-gray-800 px-3 font-normal">Landing Pages</li>
-                        <li class="cursor-pointer text-gray-600 text-xs leading-3 tracking-normal py-2 hover:bg-indigo-700 hover:text-gray-800 px-3 font-normal">Templates</li>
-                        <li class="cursor-pointer text-gray-600 text-xs leading-3 tracking-normal pt-2 hover:bg-indigo-700 hover:text-gray-800 px-3 font-normal">Components</li>
-                    </ul>
-                </li>
-                <li class="flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-compass" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z"></path>
-                        <polyline points="8 16 10 10 16 8 14 14 8 16"></polyline>
-                        <circle cx="12" cy="12" r="9"></circle>
-                    </svg>
-                    <span class="ml-2 font-bold">Performance</span>
-                </li>
-                <li class="border-b border-gray-300 flex md:hidden flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal pt-2 pb-4 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center" onclick="dropdownHandler(this)">
-                    <div class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z"></path>
-                            <polyline points="7 8 3 12 7 16"></polyline>
-                            <polyline points="17 8 21 12 17 16"></polyline>
-                            <line x1="14" y1="4" x2="10" y2="20"></line>
-                        </svg>
-                        <span class="ml-2 font-bold">Deliverables</span>
-                    </div>
-                    <ul class="ml-6 mt-1 hidden">
-                        <li class="cursor-pointer text-gray-600 text-xs leading-3 tracking-normal py-2 hover:bg-indigo-700 hover:text-gray-800 px-3 font-normal">Landing Pages</li>
-                        <li class="cursor-pointer text-gray-600 text-xs leading-3 tracking-normal py-2 hover:bg-indigo-700 hover:text-gray-800 px-3 font-normal">Templates</li>
-                        <li class="cursor-pointer text-gray-600 text-xs leading-3 tracking-normal pt-2 hover:bg-indigo-700 hover:text-gray-800 px-3 font-normal">Components</li>
-                    </ul>
-                </li>
-                <li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
-                    <div class="flex items-center">
-                        <div class="w-12 cursor-pointer flex text-sm border-2 border-transparent rounded focus:outline-none focus:border-white transition duration-150 ease-in-out">
-                            <img class="rounded h-10 w-10 object-cover" src="{{asset('imgs/me.jpg')}}" alt="logo"/>
-                        </div>
-                        <p class="text-sm ml-2 cursor-pointer">Valeri Sabev</p>
-                        <div class="sm:ml-2 text-gray-800 relative">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down cursor-pointer" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z"></path>
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                </li>
-                <li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
-                    <div class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z"/>
-                            <circle cx="12" cy="7" r="4"/>
-                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"/>
-                        </svg>
-                        <span class="ml-2">Profile</span>
-                    </div>
-                </li>
-            </ul>
         </div>
     </div>
 </nav>

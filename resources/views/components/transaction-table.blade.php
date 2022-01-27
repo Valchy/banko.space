@@ -23,6 +23,7 @@
             </tr>
         @endforeach
     </table>
+    {{$transactions->links()}}
 @else
     <span> {{__('No Transactions Yet')}} </span>
 @endif
