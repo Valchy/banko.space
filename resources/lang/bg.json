@@ -27,5 +27,8 @@
 	"Amount": "Сума",
 	"Sent Date": "Дата на изпращане",
 	"Approved Data": "Дата на одобряване",
-	"Options": "Опции"
+	"Options": "Опции",
+	"Approve": "Одобри",
+	"Refuse": "Откажи",
+	"Transactions with pending status": "Транзакции със статус очакване"
 }

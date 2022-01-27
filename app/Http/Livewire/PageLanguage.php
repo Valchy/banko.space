@@ -6,8 +6,6 @@ use Livewire\Component;
 
 class PageLanguage extends Component
 {
-    public $locale;
-
     public function changePageLanguage($locale)
     {
         app()->setLocale($locale);
