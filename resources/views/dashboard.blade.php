@@ -1,5 +1,14 @@
 <x-site-layout title="Banko.Space">
-	<center>
-		{{__('Account Balance')}}: {{auth()->user()->email}}
-	</center>
+	<div class="flex flex-col justify-center">
+		{{-- {{__('Account Balance')}}: {{auth()->user()->account()->username}} --}}
+		<h2>Welcome back, {{auth()->user()->name}}</h2>
+
+		<div>
+			<span>Account Balance: </span>
+			<b>50.00 Valchy Coins</b>
+		</div>
+		
+		<h3>Your Transactions</h3>
+		<x-transaction-table transactions="{{$transactions}}"/>
+	</div>
 </x-site-layout>

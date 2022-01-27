@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingsController;
@@ -20,24 +21,19 @@ use Spatie\Health\Http\Controllers\HealthCheckResultsController;
 */
 
 Route::get('/', HomeController::class);
-
 Route::get('/test', function () {
     // abort(500);
     throw new Exception('Custom exception message :))');
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/profile', [ProfileController::class, 'index']);
-    Route::get('/settings', [SettingsController::class, 'index']);
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
 });
 
-Route::resource('/admin', AdminController::class)->middleware(['auth', 'is_admin']);
-Route::get('transaction-history', TransactionHistoryController::class);
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-Route::get('health', HealthCheckResultsController::class);
+Route::get('/transaction-history', TransactionHistoryController::class)->name('transaction-history');
+Route::resource('/admin', AdminController::class)->middleware(['auth', 'is_admin'])->name('admin');
+Route::get('/health', HealthCheckResultsController::class)->name('health');
 
 require __DIR__.'/auth.php';
