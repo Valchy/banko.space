@@ -2,10 +2,10 @@
     <table>
         <thead>
             <tr>
-                <th>{{__('From')}}</th>
-                <th>{{__('To')}}</th>
-                <th>{{__('Status')}}</th>
-                <th>{{__('Amount')}}</th>
+                <th class="text-left">{{__('From')}}</th>
+                <th class="text-left">{{__('To')}}</th>
+                <th class="text-left">{{__('Status')}}</th>
+                <th class="text-left">{{__('Amount')}}</th>
                 {{-- <th>Sent Date</th>
                 <th>Approved Date</th> --}}
             </tr>

@@ -14,8 +14,8 @@
             </thead>
             @foreach ($transactions as $transaction)
                 <tr>
-                    <td class="py-2 px-6">{{$transaction->accountFrom->user->name}}</td>
-                    <td class="py-2 px-6">{{$transaction->accountTo->user->name}}</td>
+                    <td class="py-2 px-6">{{$transaction->accountFrom->username}}</td>
+                    <td class="py-2 px-6">{{$transaction->accountTo->username}}</td>
                     <td class="py-2 px-6">{{__($transaction->status)}}</td>
                     <td class="py-2 px-6">${{$transaction->amount}}</td>
                     <td class="py-2 px-6">
