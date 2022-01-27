@@ -31,9 +31,9 @@ Route::get('/test', function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::resource('/dashboard', [DashboardController::class, 'index']);
-    Route::resource('/profile', [ProfileController::class, 'index']);
-    Route::resource('/settings', [SettingsController::class, 'index']);
+    Route::get('/dashboard', [DashboardController::class, 'index']);
+    Route::get('/profile', [ProfileController::class, 'index']);
+    Route::get('/settings', [SettingsController::class, 'index']);
 });
 
 Route::get('/transaction-history', TransactionHistoryController::class)->name('transaction-history');

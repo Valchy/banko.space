@@ -1,7 +1,7 @@
 <x-site-layout title="Banko.Space">
 	<div class="flex flex-col justify-center">
-		{{-- {{__('Account Balance')}}: {{auth()->user()->account()->username}} --}}
-		<h2>Welcome back, {{auth()->user()->name}}</h2>
+		{{-- {{__('Account Balance')}}: {{auth()->user()->account->username}} --}}
+		<h2>Welcome back, {{auth()->user()->account->username}}</h2>
 
 		<div>
 			<span>Account Balance: </span>
@@ -9,6 +9,6 @@
 		</div>
 		
 		<h3>Your Transactions</h3>
-		<x-transaction-table transactions="{{$transactions}}"/>
+		<x-transaction-table :transactions="$transactions"/>
 	</div>
 </x-site-layout>

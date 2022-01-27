@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Transaction;
 
 class DashboardController extends Controller
 {
@@ -13,7 +14,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        //
+        $user = auth()->user()->id;
+        $transactions = Transaction::query()->where('account_from', $user)->orWhere('account_to', $user)->get();
+
+        return view('dashboard', compact('transactions'));
     }
 
     /**
