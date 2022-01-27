@@ -13,7 +13,7 @@ class Account extends Model
 
     protected $fillable = [
         'username',
-        'account_balance'
+        'account_balance',
     ];
 
     public function transactions()
