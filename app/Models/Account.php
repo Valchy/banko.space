@@ -15,7 +15,7 @@ class Account extends Model
         'username',
         'account_balance',
         'image_url',
-        'user_id'
+        'user_id',
     ];
 
     public function transactions()
