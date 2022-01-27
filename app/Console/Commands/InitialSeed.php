@@ -3,9 +3,9 @@
 namespace App\Console\Commands;
 
 use App\Models\Account;
+use App\Models\TopUp;
 use App\Models\Transaction;
 use App\Models\User;
-use App\Models\TopUp;
 use Illuminate\Console\Command;
 
 class InitialSeed extends Command
