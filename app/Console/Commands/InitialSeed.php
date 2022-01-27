@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Models\Account;
 use App\Models\Transaction;
 use App\Models\User;
+use App\Models\TopUp;
 use Illuminate\Console\Command;
 
 class InitialSeed extends Command
@@ -32,6 +33,7 @@ class InitialSeed extends Command
         ]);
 
         Transaction::factory(50)->create();
+        TopUp::factory(10)->create();
 
         return 0;
     }
