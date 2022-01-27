@@ -11,8 +11,11 @@ class PendingTransactions extends Component
     {
         $transaction = Transaction::query()->where('id', $transaction_id);
 
-        if ($approved) $transaction->update(['status' => 'approved']);
-        else $transaction->delete();
+        if ($approved) {
+            $transaction->update(['status' => 'approved']);
+        } else {
+            $transaction->delete();
+        }
     }
 
     public function render()
