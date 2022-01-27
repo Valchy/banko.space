@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\Account;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -40,11 +41,20 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+        $newAccount = Account::create([
+            'username' => $request->username,
+            'account_balance' => 50,
+        ]);
+
         $user = User::create([
             'name'     => $request->name,
             'email'    => $request->email,
             'password' => Hash::make($request->password),
+            'account_id' => $newAccount->id,
         ]);
+
+        $newAccount->user_id = $user->id;
+        $newAccount->save();
 
         event(new Registered($user));
 

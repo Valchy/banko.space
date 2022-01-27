@@ -12,7 +12,7 @@ class CreateAccountsTable extends Migration
             $table->id();
             $table->string('username');
             $table->integer('account_balance');
-            $table->integer('user_id');
+            $table->integer('user_id')->nullable();
             $table->string('image_url')->nullable();
 
             $table->timestamps();
