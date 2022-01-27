@@ -1,12 +1,12 @@
 <nav>
     <div class="py-6 px-6 w-full flex xl:hidden justify-between items-center bg-white">
         <a href="/" tabindex="0" class="flex items-center focus:outline-none w-24">
-            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg2.svg" alt="logo"/>
+            <img src="{{asset('imgs/bankospace_logo.svg')}}" alt="logo"/>
             <p tabindex="0" class="focus:outline-none text-base text-gray-800 ml-3">Banko.Space</p>
         </a>
         <div>
             <button id="menu" aria-label="open menu" class="focus:outline-none rounded-md focus:ring-2 focus:ring-gray-700 text-gray-800" onclick="sidebarHandler(true)">
-                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg3.svg" alt="menu"/>
+                <img src="{{asset('imgs/burger_menu.svg')}}" alt="menu"/>
             </button>
         </div>
     </div>
@@ -21,11 +21,11 @@
                         <div class="mt-6 flex w-full items-center justify-between">
                             <div class="flex items-center justify-between w-full">
                                 <a href="/" class="flex items-center">
-                                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg2.svg" alt="logo"/>
+                                    <img src="{{asset('imgs/bankospace_logo.svg')}}" alt="logo"/>
                                     <p tabindex="0" class="focus:outline-none text-base text-gray-800 ml-3">Banko.Space</p>
                                 </a>
                                 <button id="cross" aria-label="close menu" class="focus:outline-none focus:ring-2 rounded-md text-gray-800" onclick="sidebarHandler(false)">
-                                    <img class="icon icon-tabler icon-tabler-x" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg4.svg" alt="cross"/>
+                                    <img class="icon icon-tabler icon-tabler-x" src="{{asset('imgs/cross.svg')}}" alt="cross"/>
                                 </button>
                             </div>
                         </div>
@@ -35,9 +35,9 @@
                                     <div class="text-gray-800 pt-8">
                                         <div class="flex items-center">
                                             <div class="w-6 h-6 md:w-8 md:h-8">
-                                                <img class="icon icon-tabler icon-tabler-grid" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg5.svg" alt="dashboard"/>
+                                                <img class="icon icon-tabler icon-tabler-grid" src="{{asset('imgs/dashboard.svg')}}" alt="dashboard"/>
                                             </div>
-                                            <p tabindex="0" class="focus:outline-none {{request()->path() == 'dashboard' ? 'text-indigo-700' : 'text-gray-800'}} xl:text-base text-base ml-3">{{__('Dashboard')}}</p>
+                                            <p tabindex="0" class="focus:outline-none border-b-2 border-transparent {{request()->path() == 'dashboard' ? 'text-indigo-700 border-indigo-700' : 'text-gray-800'}} xl:text-base text-base ml-3">{{__('Dashboard')}}</p>
                                         </div>
                                     </div>
                                 </a>
@@ -47,9 +47,9 @@
                                     <div class="text-gray-800 pt-8">
                                         <div class="flex items-center">
                                             <div class="w-6 h-6 md:w-8 md:h-8">
-                                                <img class="icon icon-tabler icon-tabler-compass" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg7.svg" alt="transaction history"/>
+                                                <img class="icon icon-tabler icon-tabler-compass" src="{{asset('imgs/history.svg')}}" alt="transaction history"/>
                                             </div>
-                                            <p tabindex="0" class="focus:outline-none {{request()->path() == 'transaction-history' ? 'text-indigo-700' : 'text-gray-800'}} xl:text-base text-base ml-3">{{__('Transaction History')}}</p>
+                                            <p tabindex="0" class="focus:outline-none border-b-2 border-transparent {{request()->path() == 'transaction-history' ? 'text-indigo-700 border-indigo-700' : 'text-gray-800'}} xl:text-base text-base ml-3">{{__('Transaction History')}}</p>
                                         </div>
                                     </div>
                                 </a>
@@ -61,9 +61,9 @@
                                             <div class="flex items-center justify-between">
                                                 <div class="flex items-center">
                                                     <div class="w-6 h-6 md:w-8 md:h-8">
-                                                        <img class="icon icon-tabler icon-tabler-puzzle" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg6.svg" alt="admin"/>
+                                                        <img class="icon icon-tabler icon-tabler-puzzle" src="{{asset('imgs/admin.svg')}}" alt="admin"/>
                                                     </div>
-                                                    <p tabindex="0" class="focus:outline-none {{request()->path() == 'admin' ? 'text-indigo-700' : 'text-gray-800'}} xl:text-base text-base ml-3">{{__('Admin')}}</p>
+                                                    <p tabindex="0" class="focus:outline-none border-b-2 border-transparent {{request()->path() == 'admin' ? 'text-indigo-700 border-indigo-700' : 'text-gray-800'}} xl:text-base text-base ml-3">{{__('Admin')}}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -82,7 +82,7 @@
                                 <ul class="flex">
                                     <li class="cursor-pointer text-gray-800 pt-5 pb-3 pl-3">
                                         <div tabindex="0" class="focus:outline-none focus:text-indigo-600 w-6 h-6 md:w-8 md:h-8">
-                                            <img class="icon icon-tabler icon-tabler-bell" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg11.svg" alt="bell"/>
+                                            <img class="icon icon-tabler icon-tabler-bell" src="{{asset('imgs/bell.svg')}}" alt="bell"/>
                                         </div>
                                     </li>
                                 </ul>

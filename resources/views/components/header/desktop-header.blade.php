@@ -3,11 +3,11 @@
     <div class="container px-6 h-16 flex justify-between items-center lg:items-stretch mx-auto">
         <div class="flex items-center">
             <a href="/" class="focus:outline-none focus:ring-2 focus:ring-offset-2 mr-10 flex items-center">
-                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg1.svg" alt="logo"/>
+                <img src="{{asset('imgs/bankospace_logo_desktop.svg')}}" alt="logo"/>
                 <h3 class="text-base text-gray-800 font-bold tracking-normal leading-tight mx-3 hidden lg:block">Banko.Space</h3>
             </a>
             <div class="hidden xl:flex items-center h-full">
-                <a href="/dashboard" class="focus:outline-none border-b-2 border-transparent focus:border-indigo-700 cursor-pointer h-full flex items-center text-sm text-gray-700 hover:text-indigo-700 focus:text-indigo-700 tracking-normal transition duration-150 ease-in-out">
+                <a href="/dashboard" class="focus:outline-none border-b-2 border-transparent {{request()->path() == 'dashboard' ? 'border-indigo-700' : ''}} cursor-pointer h-full flex items-center text-sm text-gray-700 hover:text-indigo-700 focus:text-indigo-700 tracking-normal transition duration-150 ease-in-out">
                     <span class="mr-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-grid" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z"/>
@@ -19,7 +19,7 @@
                     </span>
                     {{__('Dashboard')}}
                 </a>
-                <a href="/transaction-history" class="focus:outline-none border-b-2 border-transparent focus:border-indigo-700 focus:text-indigo-700 cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-gray-800 mx-10 tracking-normal transition duration-150 ease-in-out">
+                <a href="/transaction-history" class="focus:outline-none border-b-2 border-transparent {{request()->path() == 'transaction-history' ? 'border-indigo-700' : ''}} cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-gray-800 mx-10 tracking-normal transition duration-150 ease-in-out">
                     <span class="mr-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-compass" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z"/>
@@ -30,7 +30,7 @@
                     {{__('Transaction History')}}
                 </a>
                 @auth
-                    <a href="/admin" class="focus:outline-none border-b-2 border-transparent focus:border-indigo-700 focus:text-indigo-700 cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-gray-800 mr-10 tracking-normal transition duration-150 ease-in-out">
+                    <a href="/admin" class="focus:outline-none border-b-2 border-transparent {{request()->path() == 'admin' ? 'border-indigo-700' : ''}} cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-gray-800 mr-10 tracking-normal transition duration-150 ease-in-out">
                         <span class="mr-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-puzzle" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z"/>

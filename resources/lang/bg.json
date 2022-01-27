@@ -9,5 +9,10 @@
 	"Login": "Логин",
 	"Register": "Регистрация",
 	"Guest": "Гост",
-	"Downloan Now": "Свали Сега"
+	"Downloan Now": "Свали Сега",
+	"Forgot your password?": "Забравили сте паролата си?",
+	"Remember me": "Запомни ме",
+	"Email": "Имейл",
+	"Password": "Парола",
+	"All rights reserved": "Всички права са запазени"
 }

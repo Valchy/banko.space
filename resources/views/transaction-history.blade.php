@@ -1,10 +1,9 @@
 <x-site-layout title="Banko.Space">
 	<center>
-		<h1 class="pb-3 text-2xl font-black">Transactions</h1>
-		<livewire:transaction-search/>
-
-		<br/>
-		<br/>
+		<div class="my-10">
+			<h1 class="pb-3 text-2xl font-black">Transactions</h1>
+			<livewire:transaction-search/>
+		</div>
 
 		<x-transaction-table :transactions="$transactions"/>
 		{{$transactions->links()}}

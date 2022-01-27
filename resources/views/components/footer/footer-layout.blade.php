@@ -9,7 +9,7 @@
                 </ul>
             </div>
             <div class="text-sm text-color mb-10 f-f-l">
-                <p tabindex="0" class="focus:outline-none">© 2022 Banko.Space. All rights reserved</p>
+                <p tabindex="0" class="focus:outline-none">© 2022 Banko.Space. {{__('All rights reserved')}}</p>
             </div>
         </div>
         <div class="w-9/12 h-0.5 bg-gray-100 rounded-full"></div>
