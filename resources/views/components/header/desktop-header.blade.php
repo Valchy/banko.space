@@ -77,17 +77,20 @@
                             </li>
                             <li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
                                 <a href="{{url('/logout')}}" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
+                                    <img width="16" src="{{asset('imgs/logout.png')}}"/>
                                     <span class="ml-2">{{__('Logout')}}</span>
                                 </a>
                             </li>
                         @else
                         <li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
                             <a href="/login" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
+                                <img width="16" src="{{asset('imgs/login.png')}}"/>
                                 <span class="ml-2">{{__('Login')}}</span>
                             </a>
                         </li>
                         <li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
                             <a href="/register" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
+                                <img width="16" src="{{asset('imgs/register.png')}}"/>
                                 <span class="ml-2">{{__('Register')}}</span>
                             </a>
                         </li>
