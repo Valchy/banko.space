@@ -9,8 +9,8 @@ class TopUpFactory extends Factory
     public function definition()
     {
         return [
-            'amount' => rand(10, 200),
-            'account_id' => 1
+            'amount'     => rand(10, 200),
+            'account_id' => 1,
         ];
     }
 }
