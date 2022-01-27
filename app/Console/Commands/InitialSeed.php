@@ -20,6 +20,21 @@ class InitialSeed extends Command
 
     public function handle()
     {
+        $customers = [
+            ['name' => 'Valer Sabev', 'is_admin' => true, 'email' => 'valerisabev.com@gmail.com'],
+            ['name' => 'Valer Sabev', 'is_admin' => true, 'email' => 'valerisabev.com@gmail.com'],
+            ['name' => 'Valer Sabev', 'is_admin' => true, 'email' => 'valerisabev.com@gmail.com'],
+            ['name' => 'Valer Sabev', 'is_admin' => true, 'email' => 'valerisabev.com@gmail.com'],
+            ['name' => 'Valer Sabev', 'is_admin' => true, 'email' => 'valerisabev.com@gmail.com'],
+            ['name' => 'Valer Sabev', 'is_admin' => true, 'email' => 'valerisabev.com@gmail.com'],
+            ['name' => 'Valer Sabev', 'is_admin' => true, 'email' => 'valerisabev.com@gmail.com'],
+            ['name' => 'Valer Sabev', 'is_admin' => true, 'email' => 'valerisabev.com@gmail.com'],
+            ['name' => 'Valer Sabev', 'is_admin' => true, 'email' => 'valerisabev.com@gmail.com'],
+            ['name' => 'Valer Sabev', 'is_admin' => true, 'email' => 'valerisabev.com@gmail.com'],
+            ['name' => 'Valer Sabev', 'is_admin' => true, 'email' => 'valerisabev.com@gmail.com'],
+            ['name' => 'Valer Sabev', 'is_admin' => true, 'email' => 'valerisabev.com@gmail.com'],
+        ];
+
         User::factory(10)->create();
         Account::factory(10)->create();
         Account::all()->pluck('user')->pluck('email');
