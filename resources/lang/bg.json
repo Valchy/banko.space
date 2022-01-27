@@ -13,14 +13,19 @@
 	"Guest": "Гост",
 	"Downloan Now": "Свали Сега",
 	"Forgot your password?": "Забравили сте паролата си?",
+	"Already registered?": "Вече имате регистрация?",
 	"Remember me": "Запомни ме",
+	"Register": "Регистрация",
+	"Name": "Име",
 	"Email": "Имейл",
 	"Password": "Парола",
+	"Confirm Password": "Потвърди паролата",
 	"All rights reserved": "Всички права са запазени",
 	"From": "От",
 	"To": "За",
 	"Status": "Статус",
 	"Amount": "Сума",
 	"Sent Date": "Дата на изпращане",
-	"Approved Data": "Дата на одобряване"
+	"Approved Data": "Дата на одобряване",
+	"Options": "Опции"
 }

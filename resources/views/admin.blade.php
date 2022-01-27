@@ -1,3 +1,3 @@
 <x-site-layout>
-    Hello Admin World
+    <livewire:pending-transactions/>
 </x-site-layout>
