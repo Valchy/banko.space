@@ -26,7 +26,6 @@ class AdminController extends Controller
         //
     }
 
-
     public function edit($id)
     {
         //
