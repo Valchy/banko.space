@@ -2,7 +2,7 @@
     <div class="py-6 px-6 w-full flex xl:hidden justify-between items-center bg-white">
         <a href="/" tabindex="0" class="flex items-center focus:outline-none w-24">
             <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg2.svg" alt="logo"/>
-            <p tabindex="0" class="focus:outline-none text-base md:text-2xl text-gray-800 ml-3">Banko.Space</p>
+            <p tabindex="0" class="focus:outline-none text-base text-gray-800 ml-3">Banko.Space</p>
         </a>
         <div>
             <button id="menu" aria-label="open menu" class="focus:outline-none rounded-md focus:ring-2 focus:ring-gray-700 text-gray-800" onclick="sidebarHandler(true)">
@@ -22,7 +22,7 @@
                             <div class="flex items-center justify-between w-full">
                                 <a href="/" class="flex items-center">
                                     <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg2.svg" alt="logo"/>
-                                    <p tabindex="0" class="focus:outline-none text-base md:text-2xl text-gray-800 ml-3">Banko.Space</p>
+                                    <p tabindex="0" class="focus:outline-none text-base text-gray-800 ml-3">Banko.Space</p>
                                 </a>
                                 <button id="cross" aria-label="close menu" class="focus:outline-none focus:ring-2 rounded-md text-gray-800" onclick="sidebarHandler(false)">
                                     <img class="icon icon-tabler icon-tabler-x" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg4.svg" alt="cross"/>
@@ -31,7 +31,7 @@
                         </div>
                         <ul class="f-m-m">
                             <li>
-                                <a href="dashboard" class="cursor-pointer">
+                                <a href="/dashboard" class="cursor-pointer">
                                     <div class="text-gray-800 pt-8">
                                         <div class="flex items-center">
                                             <div class="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
@@ -49,7 +49,7 @@
                                             <div class="w-6 h-6 md:w-8 md:h-8 text-gray-800">
                                                 <img class="icon icon-tabler icon-tabler-compass" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg7.svg" alt="transaction history"/>
                                             </div>
-                                            <p tabindex="0" class="focus:outline-none focus:text-indigo-600 text-gray-800 xl:text-base md:text-2xl text-base ml-3">{{__('Transaction History')}}</p>
+                                            <p tabindex="0" class="focus:outline-none focus:text-indigo-600 text-gray-800 xl:text-base text-base ml-3">{{__('Transaction History')}}</p>
                                         </div>
                                     </div>
                                 </a>
@@ -63,7 +63,7 @@
                                                     <div class="w-6 h-6 md:w-8 md:h-8 text-gray-800">
                                                         <img class="icon icon-tabler icon-tabler-puzzle" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg6.svg" alt="admin"/>
                                                     </div>
-                                                    <p tabindex="0" class="focus:outline-none focus:text-indigo-600 text-gray-800 xl:text-base md:text-2xl text-base ml-3">{{__('Admin')}}</p>
+                                                    <p tabindex="0" class="focus:outline-none focus:text-indigo-600 text-gray-800 xl:text-base text-base ml-3">{{__('Admin')}}</p>
                                                 </div>
                                             </div>
                                         </div>
