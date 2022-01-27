@@ -13,7 +13,7 @@ class Transaction extends Model
 
     protected $fillable = [
         'status',
-        'action_by'
+        'action_by',
     ];
 
     public function accountFrom()
