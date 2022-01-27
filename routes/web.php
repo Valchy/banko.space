@@ -20,6 +20,10 @@ use Spatie\Health\Http\Controllers\HealthCheckResultsController;
 |
 */
 
+// Route::prefix(app()->getLocale())->group(function() {
+//     // add all routes here
+// });
+
 Route::get('/', HomeController::class);
 Route::get('/test', function () {
     // abort(500);
@@ -27,13 +31,13 @@ Route::get('/test', function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
-    Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
+    Route::resource('/dashboard', [DashboardController::class, 'index']);
+    Route::resource('/profile', [ProfileController::class, 'index']);
+    Route::resource('/settings', [SettingsController::class, 'index']);
 });
 
 Route::get('/transaction-history', TransactionHistoryController::class)->name('transaction-history');
-Route::resource('/admin', AdminController::class)->middleware(['auth', 'is_admin'])->name('admin');
+Route::resource('/admin', AdminController::class)->middleware(['auth', 'is_admin']);
 Route::get('/health', HealthCheckResultsController::class)->name('health');
 
 require __DIR__.'/auth.php';

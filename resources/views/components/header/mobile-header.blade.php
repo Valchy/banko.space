@@ -31,7 +31,7 @@
                         </div>
                         <ul class="f-m-m">
                             <li>
-                                <a href="{{route('dashboard')}}" class="cursor-pointer">
+                                <a href="/dashboard" class="cursor-pointer">
                                     <div class="text-gray-800 pt-8">
                                         <div class="flex items-center">
                                             <div class="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
