@@ -3,9 +3,9 @@
         <div class="text-black flex flex-col md:items-center f-f-l pt-3">
             <div class="my-6 text-base text-color f-f-l"> 
                 <ul class="md:flex items-center">
-                    <li class="md:mr-6 cursor-pointer pt-4 lg:py-0"><a href="/dashboard" class="focus:outline-none focus:underline hover:text-gray-500">Dashboard </a></li>
-                    <li class="md:mr-6 cursor-pointer pt-4 lg:py-0"><a href="/transaction-history" class="focus:outline-none focus:underline hover:text-gray-500">Transaction History </a></li>
-                    <li class="md:mr-6 cursor-pointer pt-4 lg:py-0"><a href="/download" class="focus:outline-none focus:underline hover:text-gray-500">Download Now </a></li>
+                    <li class="md:mr-6 cursor-pointer pt-4 lg:py-0"><a href="/dashboard" class="focus:outline-none focus:underline hover:text-gray-500">{{__('Dashboard')}} </a></li>
+                    <li class="md:mr-6 cursor-pointer pt-4 lg:py-0"><a href="/transaction-history" class="focus:outline-none focus:underline hover:text-gray-500">{{__('Transaction History')}} </a></li>
+                    <li class="md:mr-6 cursor-pointer pt-4 lg:py-0"><a href="/download" class="focus:outline-none focus:underline hover:text-gray-500">{{__('Download Now')}} </a></li>
                 </ul>
             </div>
             <div class="text-sm text-color mb-10 f-f-l">
