@@ -13,7 +13,8 @@ class Account extends Model
 
     protected $fillable = [
         'username',
-        'account_balance'
+        'account_balance',
+        'image_url'
     ];
 
     public function transactions()

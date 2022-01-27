@@ -13,6 +13,7 @@ class CreateAccountsTable extends Migration
             $table->string('username');
             $table->integer('account_balance');
             $table->integer('user_id');
+            $table->string('image_url');
 
             $table->timestamps();
             $table->softDeletes();
