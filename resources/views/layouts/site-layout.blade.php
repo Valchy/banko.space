@@ -25,7 +25,7 @@
 
 	{{-- Page Footer --}}
 	<footer>
-		@include('components.footer')
+		@include('components.footer.footer-layout')
 	</footer>
 
 	{{-- JS Files --}}

@@ -34,10 +34,10 @@
                                 <a href="/dashboard" class="cursor-pointer">
                                     <div class="text-gray-800 pt-8">
                                         <div class="flex items-center">
-                                            <div class="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
+                                            <div class="w-6 h-6 md:w-8 md:h-8">
                                                 <img class="icon icon-tabler icon-tabler-grid" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg5.svg" alt="dashboard"/>
                                             </div>
-                                            <p tabindex="0" class="focus:outline-none focus:text-indigo-600 text-indigo-700 xl:text-base text-base ml-3">{{__('Dashboard')}}</p>
+                                            <p tabindex="0" class="focus:outline-none {{request()->path() == 'dashboard' ? 'text-indigo-700' : 'text-gray-800'}} xl:text-base text-base ml-3">{{__('Dashboard')}}</p>
                                         </div>
                                     </div>
                                 </a>
@@ -46,10 +46,10 @@
                                 <a href="/transaction-history" class="cursor-pointer">
                                     <div class="text-gray-800 pt-8">
                                         <div class="flex items-center">
-                                            <div class="w-6 h-6 md:w-8 md:h-8 text-gray-800">
+                                            <div class="w-6 h-6 md:w-8 md:h-8">
                                                 <img class="icon icon-tabler icon-tabler-compass" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg7.svg" alt="transaction history"/>
                                             </div>
-                                            <p tabindex="0" class="focus:outline-none focus:text-indigo-600 text-gray-800 xl:text-base text-base ml-3">{{__('Transaction History')}}</p>
+                                            <p tabindex="0" class="focus:outline-none {{request()->path() == 'transaction-history' ? 'text-indigo-700' : 'text-gray-800'}} xl:text-base text-base ml-3">{{__('Transaction History')}}</p>
                                         </div>
                                     </div>
                                 </a>
@@ -60,10 +60,10 @@
                                         <div class="text-gray-800 pt-8">
                                             <div class="flex items-center justify-between">
                                                 <div class="flex items-center">
-                                                    <div class="w-6 h-6 md:w-8 md:h-8 text-gray-800">
+                                                    <div class="w-6 h-6 md:w-8 md:h-8">
                                                         <img class="icon icon-tabler icon-tabler-puzzle" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/left-aligned-with-icons-svg6.svg" alt="admin"/>
                                                     </div>
-                                                    <p tabindex="0" class="focus:outline-none focus:text-indigo-600 text-gray-800 xl:text-base text-base ml-3">{{__('Admin')}}</p>
+                                                    <p tabindex="0" class="focus:outline-none {{request()->path() == 'admin' ? 'text-indigo-700' : 'text-gray-800'}} xl:text-base text-base ml-3">{{__('Admin')}}</p>
                                                 </div>
                                             </div>
                                         </div>
