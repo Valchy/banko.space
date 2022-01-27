@@ -10,7 +10,7 @@ class TopUpFactory extends Factory
     {
         return [
             'amount' => rand(10, 200),
-            'account_id' => rand(1, 5)
+            'account_id' => 1
         ];
     }
 }

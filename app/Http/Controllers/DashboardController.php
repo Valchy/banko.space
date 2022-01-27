@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Transaction;
+use App\Models\TopUp;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -16,8 +17,9 @@ class DashboardController extends Controller
     {
         $user = auth()->user()->id;
         $transactions = Transaction::query()->where('account_from', $user)->orWhere('account_to', $user)->get();
+        $topUps = TopUp::query()->where('account_id', $user)->get();
 
-        return view('dashboard', compact('transactions'));
+        return view('dashboard', compact('transactions', 'topUps'));
     }
 
     /**
