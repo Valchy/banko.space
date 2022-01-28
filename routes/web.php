@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SendMoneyController;
 use App\Http\Controllers\SettingsController;
@@ -44,6 +45,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile-update');
     Route::post('/profile/delete', [ProfileController::class, 'destroy'])->name('profile-delete');
     Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
+    Route::post('/image-upload', ImageUploadController::class)->name('image-upload');
 });
 
 Route::get('/transaction-history', TransactionHistoryController::class)->name('transaction-history');

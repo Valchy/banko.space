@@ -1,6 +1,14 @@
 <x-site-layout>
-    <img class="w-64 rounded-full" src="{{asset('imgs/me.jpg')}}" alt="profile picture"/>
+    <img class="w-64 rounded-full" src="{{auth()->user()->getMedia('pics')->first()?->getUrl()}}" alt="profile picture">
     <h1 class="m-10 text-2xl font-black">{{auth()->user()->name}}</h1>
+
+    <form action="/image-upload" method="POST" enctype="multipart/form-data" class="flex items-center justify-center">
+        <x-honeypot/>
+        @csrf
+        
+        <input type="file" name="profile-pic"/>
+        <button type="submit" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded mx-1">Upload</button>
+    </form>
 
     <form id="updateAccountForm" method="POST" action="{{route('profile-update')}}">
         <x-honeypot/>

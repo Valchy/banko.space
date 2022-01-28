@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "coconutcraig/laravel-postmark": "^2.11",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.75",
@@ -17,7 +18,8 @@
         "spatie/laravel-honeypot": "^4.1",
         "spatie/laravel-ignition": "^1.0",
         "spatie/laravel-medialibrary": "^9.0.0",
-        "spatie/laravel-ray": "^1.27"
+        "spatie/laravel-ray": "^1.27",
+        "wildbit/swiftmailer-postmark": "^3.3"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",

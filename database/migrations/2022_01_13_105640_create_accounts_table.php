@@ -13,7 +13,6 @@ class CreateAccountsTable extends Migration
             $table->string('username');
             $table->integer('account_balance');
             $table->integer('user_id')->nullable();
-            $table->string('image_url')->nullable();
 
             $table->timestamps();
             $table->softDeletes();
