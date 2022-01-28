@@ -19,7 +19,7 @@ class ProfileController extends Controller
         Account::query()->where('id', $user_id)->update(['username' => $request->username]);
         User::query()->where('id', $user_id)->update(['email' => $request->email]);
 
-        return view('profile');
+        return redirect()->route('profile')->with('success','Information updated!');
     }
 
     public function destroy()
@@ -28,6 +28,6 @@ class ProfileController extends Controller
         Account::findOrFail($user_id)->delete();
         User::findOrFail($user_id)->delete();
 
-        return view('home');
+        return redirect()->route('home');
     }
 }

@@ -30,4 +30,6 @@
     <x-button onclick="document.getElementById('updateAccountForm').submit();" class="mt-8">
         {{ __('Update Information') }}
     </x-button>
+
+    <x-flash-message/>
 </x-site-layout>
