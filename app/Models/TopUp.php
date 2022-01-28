@@ -13,7 +13,7 @@ class TopUp extends Model
 
     protected $fillable = [
         'account_id',
-        'amount'
+        'amount',
     ];
 
     public function account()

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Transaction;
 use App\Models\Account;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 
 class SendMoneyController extends Controller
@@ -24,13 +24,16 @@ class SendMoneyController extends Controller
         $account = Account::findOrFail($user_id);
         $account->account_balance -= $amount;
 
-        if ($account->account_balance < 0) return redirect()->route('send-money')->with('error', 'Insufficient funds to complete the transaction!');
-        else $account->save();
+        if ($account->account_balance < 0) {
+            return redirect()->route('send-money')->with('error', 'Insufficient funds to complete the transaction!');
+        } else {
+            $account->save();
+        }
 
         Transaction::create([
             'account_from' => $user_id,
-            'account_to' => $account_to,
-            'amount' => $amount,
+            'account_to'   => $account_to,
+            'amount'       => $amount,
         ]);
 
         return redirect()->route('dashboard')->with('success', 'Money is on the way!');

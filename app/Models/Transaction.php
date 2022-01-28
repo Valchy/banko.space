@@ -16,7 +16,7 @@ class Transaction extends Model
         'action_by',
         'account_from',
         'account_to',
-        'amount'
+        'amount',
     ];
 
     public function accountFrom()
