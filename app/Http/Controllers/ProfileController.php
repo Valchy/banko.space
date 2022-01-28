@@ -19,7 +19,7 @@ class ProfileController extends Controller
         Account::query()->where('id', $user_id)->update(['username' => $request->username]);
         User::query()->where('id', $user_id)->update(['email' => $request->email]);
 
-        return redirect()->route('profile')->with('success','Information updated!');
+        return redirect()->route('profile')->with('success', 'Information updated!');
     }
 
     public function destroy()
