@@ -9,10 +9,13 @@ class TransactionSearch extends Component
 {
     public function searchTransactions($searchValue)
     {
-        $filteredTransaction = Transaction::all();
+        // $transactions = Transaction::query()->where('account_from', 1)->orWhere('account_to', 1)->get()->pluck('accountFrom')->pluck('username');
+    }
 
-        $test = Transaction::query()->where('account_from', 1)->orWhere('account_to', 1)->get()->pluck('accountFrom')->pluck('username');
+    public function render()
+    {
+        $transactions = Transaction::orderBy('created_at', 'DESC')->paginate(10);
 
-        return view('transaction-history', compact('filteredTransaction'));
+        return view('livewire.transaction-search', compact('transactions'));
     }
 }

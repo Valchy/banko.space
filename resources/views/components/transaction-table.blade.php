@@ -21,5 +21,5 @@
     </table>
     {{$transactions->links()}}
 @else
-    <span> {{__('No Transactions Yet')}} </span>
+    <span class="block"> {{__('No Transactions Yet')}} </span>
 @endif

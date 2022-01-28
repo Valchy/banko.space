@@ -2,15 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Transaction;
-use Illuminate\Http\Request;
-
 class TransactionHistoryController extends Controller
 {
-    public function __invoke(Request $request)
+    public function __invoke()
     {
-        $transactions = Transaction::orderBy('created_at', 'DESC')->paginate(10);
-
-        return view('transaction-history', compact('transactions'));
+        return view('transaction-history');
     }
 }
