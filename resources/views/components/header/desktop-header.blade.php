@@ -2,12 +2,12 @@
 <nav class="w-full bg-white hidden xl:block shadow z-10 relative">
     <div class="container px-6 h-16 flex justify-between items-center lg:items-stretch mx-auto">
         <div class="flex items-center">
-            <a href="/" class="focus:outline-none focus:ring-2 focus:ring-offset-2 mr-10 flex items-center">
+            <a href="{{route('home')}}" class="focus:outline-none focus:ring-2 focus:ring-offset-2 mr-10 flex items-center">
                 <img src="{{asset('imgs/bankospace_logo_desktop.svg')}}" alt="logo"/>
                 <h3 class="text-base text-gray-800 font-bold tracking-normal leading-tight mx-3 hidden lg:block">Banko.Space</h3>
             </a>
             <div class="hidden xl:flex items-center h-full">
-                <a href="/dashboard" class="focus:outline-none border-b-2 border-transparent {{request()->path() == 'dashboard' ? 'border-indigo-700' : ''}} cursor-pointer h-full flex items-center text-sm text-gray-700 hover:text-indigo-700 focus:text-indigo-700 tracking-normal transition duration-150 ease-in-out">
+                <a href="{{route('dashboard')}}" class="focus:outline-none border-b-2 border-transparent {{request()->path() == 'dashboard' ? 'border-indigo-700' : ''}} cursor-pointer h-full flex items-center text-sm text-gray-700 hover:text-indigo-700 focus:text-indigo-700 tracking-normal transition duration-150 ease-in-out">
                     <span class="mr-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-grid" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z"/>
@@ -19,7 +19,7 @@
                     </span>
                     {{__('Dashboard')}}
                 </a>
-                <a href="/transaction-history" class="focus:outline-none border-b-2 border-transparent {{request()->path() == 'transaction-history' ? 'border-indigo-700' : ''}} cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-gray-800 mx-10 tracking-normal transition duration-150 ease-in-out">
+                <a href="{{route('transaction-history')}}" class="focus:outline-none border-b-2 border-transparent {{request()->path() == 'transaction-history' ? 'border-indigo-700' : ''}} cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-gray-800 mx-10 tracking-normal transition duration-150 ease-in-out">
                     <span class="mr-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-compass" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z"/>
@@ -30,7 +30,7 @@
                     {{__('Transaction History')}}
                 </a>
                 @auth
-                    <a href="/admin" class="focus:outline-none border-b-2 border-transparent {{request()->path() == 'admin' ? 'border-indigo-700' : ''}} cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-gray-800 mr-10 tracking-normal transition duration-150 ease-in-out">
+                    <a href="{{route('admin')}}" class="focus:outline-none border-b-2 border-transparent {{request()->path() == 'admin' ? 'border-indigo-700' : ''}} cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-gray-800 mr-10 tracking-normal transition duration-150 ease-in-out">
                         <span class="mr-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-puzzle" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z"/>
@@ -56,7 +56,7 @@
                     <ul class="py-6 px-6 w-48 border-r bg-white absolute rounded left-0 shadow mt-16 top-0 hidden">
                         @if (auth()->check())
                             <li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
-                                <a href="/profile" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
+                                <a href="{{route('profile')}}" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z"/>
                                         <circle cx="12" cy="7" r="4"/>
@@ -66,7 +66,7 @@
                                 </a>
                             </li>
                             <li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
-                                <a href="/settings" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
+                                <a href="{{route('settings')}}" class="focus:outline-none focus:underline focus:text-indigo-700 flex items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z"/>
                                         <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>

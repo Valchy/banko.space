@@ -2,7 +2,7 @@
     <img class="w-64 rounded-full" src="{{asset('imgs/me.jpg')}}" alt="profile picture"/>
     <h1 class="m-10 text-2xl font-black">{{auth()->user()->name}}</h1>
 
-    <form method="UPDATE" action="/profile-update">
+    <form method="POST" action="{{route('profile-update')}}">
         @csrf
         <x-honeypot/>
 
@@ -17,6 +17,8 @@
             <x-label for="email" :value="__('Email')" />
             <x-input value="{{auth()->user()->email}}" id="email" class="text-center block mt-1 w-80" type="email" name="email" required />
         </div>
+
+        <a href="{{route('profile-delete')}}" class="hover:text-red-500 cursor-pointer block mt-5">Delete Account</a>
 
         <x-button class="mt-8">
             {{ __('Update Information') }}

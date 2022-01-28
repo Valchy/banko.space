@@ -20,7 +20,7 @@ use Spatie\Health\Http\Controllers\HealthCheckResultsController;
 |
 */
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name('home');
 Route::get('/test', function () {
     // abort(500);
     throw new Exception('Custom exception message :))');
@@ -29,16 +29,18 @@ Route::get('/test', function () {
 Route::get('/locale/{locale}', function ($locale) {
     session()->put('locale', $locale);
     return redirect()->back();
-});
+})->name('locale');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index']);
-    Route::get('/profile', [ProfileController::class, 'index']);
-    Route::get('/settings', [SettingsController::class, 'index']);
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+    Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile-update');
+    Route::delete('/profile/delete', [ProfileController::class, 'destroy'])->name('profile-delete');
+    Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
 });
 
 Route::get('/transaction-history', TransactionHistoryController::class)->name('transaction-history');
-Route::resource('/admin', AdminController::class)->middleware(['auth', 'is_admin']);
+Route::get('/admin', AdminController::class)->middleware(['auth', 'is_admin'])->name('admin');
 Route::get('/health', HealthCheckResultsController::class)->name('health');
 
 require __DIR__.'/auth.php';
