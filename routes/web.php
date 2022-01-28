@@ -36,7 +36,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
     Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile-update');
-    Route::delete('/profile/delete', [ProfileController::class, 'destroy'])->name('profile-delete');
+    Route::post('/profile/delete', [ProfileController::class, 'destroy'])->name('profile-delete');
     Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
 });
 

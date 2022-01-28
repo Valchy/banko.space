@@ -22,8 +22,12 @@ class ProfileController extends Controller
         return view('profile');
     }
 
-    public function destroy($id)
+    public function destroy()
     {
-        //
+        $user_id = auth()->user()->id;
+        Account::findOrFail($user_id)->delete();
+        User::findOrFail($user_id)->delete();
+
+        return view('home');
     }
 }
