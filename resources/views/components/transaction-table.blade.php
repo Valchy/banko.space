@@ -2,13 +2,11 @@
     <table>
         <thead>
             <tr>
-                <th>{{__('Sender')}}</th>
-                <th>{{__('Recipient')}}</th>
-                <th>{{__('Amount')}}</th>
-                <th>{{__('Date')}}</th>
-                <th>{{__('Status')}}</th>
-                {{-- <th>Sent Date</th>
-                <th>Approved Date</th> --}}
+                <th class="text-center">{{__('Sender')}}</th>
+                <th class="text-center">{{__('Recipient')}}</th>
+                <th class="text-center">{{__('Amount')}}</th>
+                <th class="text-center">{{__('Date')}}</th>
+                <th class="text-center">{{__('Status')}}</th>
             </tr>
         </thead>
         @foreach ($transactions as $transaction)
@@ -18,8 +16,6 @@
                 <td class="text-center py-2 px-6">${{$transaction->amount}}</td>
                 <td class="text-center py-2 px-6">{{Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $transaction->created_at)->format('d/m/y - H:i')}}</td>
                 <td class="text-center py-2 px-6">{{__($transaction->status)}}</td>
-                {{-- <td class="py-2 px-6">{{\Carbon\Carbon::createFromFormat('H:i:s', $transaction->created_at)->format('h:i')}}</td> --}}
-                {{-- <td class="py-2 px-6">{{$transaction->created_at == $transaction->updated_at ? '-' : $transaction->updated_at}}</td> --}}
             </tr>
         @endforeach
     </table>
