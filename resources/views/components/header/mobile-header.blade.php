@@ -116,7 +116,7 @@
                                 </li>
                             @endif
                         </ul>
-                        <livewire:page-language/>
+                        <x-page-language/>
                         <div class="border-t border-gray-300">
                             <div class="w-full flex items-center justify-between pt-1">
                                 <div class="flex items-center">

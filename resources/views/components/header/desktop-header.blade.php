@@ -44,7 +44,7 @@
         </div>
         <div class="h-full hidden xl:flex items-center justify-end">
             <div class="h-full flex">
-                <livewire:page-language/>
+                <x-page-language/>
                 <button aria-label="open notifications" class="focus:outline-none focus:text-indigo-700 hover:text-indigo-700 w-20 h-full flex items-center justify-center border-l border-r border-gray-300 cursor-pointer text-gray-400">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bell" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z"/>

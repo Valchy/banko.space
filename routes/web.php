@@ -26,6 +26,11 @@ Route::get('/test', function () {
     throw new Exception('Custom exception message :))');
 });
 
+Route::get('/locale/{locale}', function ($locale) {
+    session()->put('locale', $locale);
+    return redirect()->back();
+});
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index']);
     Route::get('/profile', [ProfileController::class, 'index']);

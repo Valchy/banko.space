@@ -9,9 +9,8 @@ class PageLanguage
 {
     public function handle(Request $request, Closure $next)
     {
-        // app()->setLocale('bg');
-        // session()->get('session_fancy_name');
-        // make lang with session
+        if (session()->has('locale')) app()->setLocale(session('locale'));
+        else app()->setLocale(config('app.locale'));
 
         return $next($request);
     }
