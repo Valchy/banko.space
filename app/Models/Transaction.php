@@ -14,6 +14,9 @@ class Transaction extends Model
     protected $fillable = [
         'status',
         'action_by',
+        'account_from',
+        'account_to',
+        'amount'
     ];
 
     public function accountFrom()

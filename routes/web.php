@@ -4,7 +4,9 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SendMoneyController;
 use App\Http\Controllers\SettingsController;
+use App\Http\Controllers\TopUpController;
 use App\Http\Controllers\TransactionHistoryController;
 use Illuminate\Support\Facades\Route;
 use Spatie\Health\Http\Controllers\HealthCheckResultsController;
@@ -34,6 +36,10 @@ Route::get('/locale/{locale}', function ($locale) {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/top-up-account', [TopUpController::class, 'index'])->name('top-up-account');
+    Route::post('/top-up-account', [TopUpController::class, 'create'])->name('top-up-account-now');
+    Route::get('/send-money', [SendMoneyController::class, 'index'])->name('send-money');
+    Route::post('/send-money', [SendMoneyController::class, 'create'])->name('send-money-now');
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
     Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile-update');
     Route::post('/profile/delete', [ProfileController::class, 'destroy'])->name('profile-delete');

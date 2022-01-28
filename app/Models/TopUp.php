@@ -11,6 +11,11 @@ class TopUp extends Model
     use HasFactory;
     use SoftDeletes;
 
+    protected $fillable = [
+        'account_id',
+        'amount'
+    ];
+
     public function account()
     {
         return $this->belongsTo(Account::class);

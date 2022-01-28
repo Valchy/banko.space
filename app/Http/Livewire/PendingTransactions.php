@@ -35,7 +35,9 @@ class PendingTransactions extends Component
     public function render()
     {
         // Get all Transactions and paginate by 5
-        $transactions = Transaction::query()->where('status', 'pending')->paginate(5);
+        $transactions = Transaction::query()->where('status', 'pending')->orderBy('created_at', 'DESC')->paginate(5);
+        
+        // if (session()->has('successful-operation')) session()->flash('success', 'Operation Successful!');
 
         return view('livewire.pending-transactions', compact('transactions'));
     }

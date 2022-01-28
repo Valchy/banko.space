@@ -8,8 +8,8 @@
 		<div class="flex justify-between items-center max-w-screen-md text-left border-b-2 border-gray-700 pb-5">
 			<span class="text-3xl">{{__('Account Balance')}}: <b class="text-3xl">${{auth()->user()->account->account_balance}}</b></span>
 			<div class="mt-15 flex align-center justify-center">
-				<img class="cursor-pointer mx-5" width="55" src="{{asset('imgs/topup.png')}}" alt="topup icon"/>
-				<img class="cursor-pointer" width="55" src="{{asset('imgs/send_money.png')}}" alt="send money icon"/>
+				<a href="{{route('top-up-account')}}"><img class="cursor-pointer mx-5" width="55" src="{{asset('imgs/topup.png')}}" alt="topup icon"/></a>
+				<a href="{{route('send-money')}}"><img class="cursor-pointer" width="55" src="{{asset('imgs/send_money.png')}}" alt="send money icon"/></a>
 			</div>
 		</div>
 		
@@ -18,4 +18,6 @@
 			<x-transaction-table :transactions="$transactions"/>
 		</div>
 	</center>
+
+	<x-flash-message/>
 </x-site-layout>

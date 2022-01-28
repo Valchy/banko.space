@@ -23,6 +23,7 @@
         @endforeach
     </table>
     {{$transactions->links()}}
+    <x-flash-message/>
 @else
     <span> {{__('No Transactions Yet')}} </span>
 @endif
