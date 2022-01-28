@@ -34,7 +34,7 @@ class InitialSeed extends Command
             ['username' => 'Reham4', 'name' => 'Reham', 'is_admin' => false, 'email' => 'reham@bankospace.com', 'password' => 'password'],
             ['username' => 'Umaima23', 'name' => 'Umaima', 'is_admin' => false, 'email' => 'umaima@bankospace.com', 'password' => 'password'],
             ['username' => 'Victor98', 'name' => 'Victor', 'is_admin' => false, 'email' => 'victor@bankospace.com', 'password' => 'password'],
-            ['username' => 'Yuri123', 'name' => 'Yuri', 'is_admin' => false, 'email' => 'yuri@bankospace.com', 'password' => 'password']
+            ['username' => 'Yuri123', 'name' => 'Yuri', 'is_admin' => false, 'email' => 'yuri@bankospace.com', 'password' => 'password'],
         ]);
 
         foreach ($customers as $customer) {
@@ -42,15 +42,15 @@ class InitialSeed extends Command
                 'username'        => $customer['username'],
                 'account_balance' => 50,
             ]);
-    
+
             $user = User::create([
                 'name'       => $customer['name'],
                 'email'      => $customer['email'],
                 'password'   => Hash::make($customer['password']),
                 'account_id' => $newAccount->id,
-                'is_admin'   => $customer['is_admin']
+                'is_admin'   => $customer['is_admin'],
             ]);
-    
+
             $newAccount->user_id = $user->id;
             $newAccount->save();
         }
