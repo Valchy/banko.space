@@ -50,6 +50,6 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get('/transaction-history', TransactionHistoryController::class)->name('transaction-history');
 Route::get('/admin', AdminController::class)->middleware(['auth', 'is_admin'])->name('admin');
-Route::get('/health', HealthCheckResultsController::class)->name('health');
+Route::get('/health', HealthCheckResultsController::class)->middleware(['auth', 'is_admin'])->name('health');
 
 require __DIR__.'/auth.php';
