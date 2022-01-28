@@ -10,7 +10,7 @@ class CreateTopUpsTable extends Migration
     {
         Schema::create('top_ups', function (Blueprint $table) {
             $table->id();
-            $table->string('amount');
+            $table->float('amount');
             $table->integer('account_id');
 
             $table->timestamps();

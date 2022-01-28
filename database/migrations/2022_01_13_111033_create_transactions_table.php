@@ -13,7 +13,7 @@ class CreateTransactionsTable extends Migration
             $table->integer('account_from');
             $table->integer('account_to');
             $table->string('status', 255)->default('pending');
-            $table->integer('amount');
+            $table->float('amount');
             $table->integer('action_by')->nullable();
 
             $table->timestamps();

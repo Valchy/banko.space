@@ -29,7 +29,7 @@
                     </span>
                     {{__('Transaction History')}}
                 </a>
-                @auth
+                @if (auth()->check() && auth()->user()->is_admin)
                     <a href="{{route('admin')}}" class="focus:outline-none border-b-2 border-transparent {{request()->path() == 'admin' ? 'border-indigo-700' : ''}} cursor-pointer h-full flex items-center text-sm hover:text-indigo-700 text-gray-800 mr-10 tracking-normal transition duration-150 ease-in-out">
                         <span class="mr-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-puzzle" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -39,7 +39,7 @@
                         </span>
                         {{__('Admin')}}
                     </a>
-                @endauth
+                @endif
             </div>
         </div>
         <div class="h-full hidden xl:flex items-center justify-end">

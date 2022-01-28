@@ -54,7 +54,7 @@
                                     </div>
                                 </a>
                             </li>
-                            @auth
+                            @if (auth()->check() && auth()->user()->is_admin)
                                 <li>
                                     <a href="{{route('admin')}}" class="cursor-pointer">
                                         <div class="text-gray-800 pt-8">
@@ -69,7 +69,7 @@
                                         </div>
                                     </a>
                                 </li>
-                            @endauth
+                            @endif
                         </ul>
                     </div>
                     <div class="w-full pt-4">

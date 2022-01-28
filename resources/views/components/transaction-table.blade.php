@@ -1,4 +1,4 @@
-@if ($transactions)
+@if (count($transactions) != 0)
     <table>
         <thead>
             <tr>
