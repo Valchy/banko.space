@@ -121,7 +121,7 @@
                             <div class="w-full flex items-center justify-between pt-1">
                                 <div class="flex items-center">
                                     @auth
-                                        <img class="focus:outline-none w-8 h-8 rounded-md" src="{{asset('imgs/me.jpg')}}" alt="profile-pic"/>
+                                        <img class="focus:outline-none w-8 h-8 rounded-md" src="{{auth()->user()->getMedia('pics')->last()->getUrl() ?? asset('imgs/user.png')}}" alt="profile-pic"/>
                                     @endauth
                                     <p class="text-gray-800 text-base leading-4 ml-2">{{auth()->user()->name ?? __('Guest')}}</p>
                                 </div>
