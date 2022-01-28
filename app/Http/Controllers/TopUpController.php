@@ -20,7 +20,7 @@ class TopUpController extends Controller
 
         TopUp::create([
             'account_id' => $user_id,
-            'amount' => $amount
+            'amount'     => $amount,
         ]);
 
         $account = Account::findOrFail($user_id);
