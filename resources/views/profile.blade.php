@@ -1,5 +1,5 @@
 <x-site-layout>
-    <img class="w-64 rounded-full" src="{{auth()->user()->getMedia('pics')->last()->getUrl() ?? asset('imgs/user.png')}}" alt="profile picture">
+    <img class="w-64 rounded-full" src="{{auth()->user()?->getMedia('pics')?->last()?->getUrl() ?? asset('imgs/user.png')}}" alt="profile picture">
     <h1 class="m-10 text-2xl font-black">{{auth()->user()->name}}</h1>
 
     <form action="/image-upload" method="POST" enctype="multipart/form-data" class="flex items-center justify-center">
