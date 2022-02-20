@@ -1,7 +1,8 @@
 <x-site-layout>
-    <h1 class="mb-10 text-2xl font-black">{{__('Send Money')}}</h1>
+    <h1 class="text-2xl font-black">{{__('Send Money')}}</h1>
+    <span class="block">{{__('Available Balance: ')}}${{auth()->user()->account->account_balance}}
 
-    <form method="POST" action="{{route('send-money-now')}}">
+    <form class="mt-10" method="POST" action="{{route('send-money-now')}}">
         <x-honeypot/>
         @csrf
 
@@ -12,8 +13,8 @@
         </select>
 
         <div class="mt-4">
-            <x-label for="amount" :value="__('Amount')" />
-            <x-input id="amount" class="text-center block mt-1 w-80" type="text" name="amount" required autofocus />
+            <x-label for="amount" :value="__('Amount')"/>
+            <x-input id="amount" class="text-center block mt-1 w-80" type="text" name="amount" placeholder="$10" required autofocus/>
         </div>
 
         <x-button class="mt-8">
